@@ -1,0 +1,92 @@
+/* DARK GRADIENT BACKGROUND */
+.services-section {
+  min-height: 100vh;
+  padding: 60px 20px;
+  background: radial-gradient(circle at top, #111 0%, #000 60%);
+  color: #e5e7eb;
+  font-family: "Poppins", sans-serif;
+}
+
+/* TITLE */
+.services-title {
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 3px;
+}
+
+/* CONTAINER */
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+}
+
+/* SERVICE PILL */
+.service-pill {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 26px;
+  border-radius: 999px;
+  background: #050505;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* MOVING GLOW BORDER */
+.service-pill::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    var(--glow-color),
+    transparent
+  );
+  animation: rotateGlow 3s linear infinite;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.service-pill:hover::before {
+  opacity: 1;
+}
+
+@keyframes rotateGlow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ICON */
+.pill-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--glow-color);
+  box-shadow: 0 0 0 transparent;
+  transition: box-shadow 0.3s ease;
+}
+
+.service-pill:hover .pill-icon {
+  box-shadow: 0 0 14px var(--glow-color);
+}
+
+/* TEXT */
+.pill-text {
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+.service-link {
+  text-decoration: none;
+  color: inherit;
+}

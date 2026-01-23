@@ -1,0 +1,101 @@
+.intro-container {
+  height: 100vh;
+  background: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+/* IMAGE FROM TOP */
+.img-top {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: clamp(120px, 20vw, 180px);
+  transform: translate(-50%, -180%);
+  animation: slideFromTop 1.2s ease forwards;
+  z-index: 2;
+}
+
+@keyframes slideFromTop {
+  to {
+    transform: translate(-70%, -50%);
+  }
+}
+
+/* IMAGE FROM RIGHT */
+.img-right {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  width: clamp(120px, 20vw, 180px);
+  transform: translate(180%, -50%);
+  animation: slideFromRight 1.2s ease forwards;
+  animation-delay: 0.4s;
+  z-index: 1;
+}
+
+@keyframes slideFromRight {
+  to {
+    transform: translate(-30%, -50%);
+  }
+}
+
+/* TEXT ANIMATION */
+.intro-text {
+  position: absolute;
+  bottom: 12%;
+  opacity: 0;
+  font-size: clamp(1.6rem, 5vw, 2.8rem);
+  animation: textFade 1s ease forwards;
+  animation-delay: 1.5s;
+  text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes textFade {
+  from {
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+/* Text color helpers */
+.orange {
+  color: #ef4444; /* red */
+}
+
+.yellow {
+  color: #f59e0b; /* yellow */
+}
+.green{
+    color: #10b981; /* green */
+}
+.sky{
+    color: #0ea5e9; /* sky */
+}
+.pink{
+    color: #cf3482; /* pink */
+}
+/* Title styling */
+.title {
+  bottom: 18%;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+/* Subtitle styling */
+.subtitle {
+  bottom: 10%;
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  font-weight: 400;
+  color: #d1d5db;
+  animation-delay: 1.9s;
+  
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
+}
