@@ -13,7 +13,11 @@ function App() {
 
   return (
     <BrowserRouter>
-      {showIntro ? <Intro /> : <AppRoutes />}
+      {/* ROUTES ALWAYS MOUNTED */}
+      <AppRoutes />
+
+      {/* INTRO OVERLAY */}
+      {showIntro && <Intro />}
     </BrowserRouter>
   );
 }

@@ -1,11 +1,11 @@
 import Services from "./Services";
-import { Outlet } from "react-router-dom";
+// import { Outlet } from "react-router-dom";
 
 const Home = () => {
   return (
     <div>
       <Services />
-      <Outlet />
+      {/* <Outlet /> */}
     </div>
   );
 };

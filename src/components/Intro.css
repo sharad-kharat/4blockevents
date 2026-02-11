@@ -1,23 +1,30 @@
+/* =========================
+   CONTAINER
+========================= */
 .intro-container {
-  height: 100vh;
-  background: #000000;
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at top, #111 0%, #000 65%);
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   overflow: hidden;
-  color: white;
+  z-index: 9999;
+  color: #f8fafc;
 }
 
-/* IMAGE FROM TOP */
+/* =========================
+   DECORATIVE IMAGES
+========================= */
 .img-top {
   position: absolute;
-  top: 40%;
+  top: 42%;
   left: 50%;
-  width: clamp(120px, 20vw, 180px);
+  width: clamp(120px, 18vw, 180px);
   transform: translate(-50%, -180%);
   animation: slideFromTop 1.2s ease forwards;
   z-index: 2;
+  filter: drop-shadow(0 0 18px rgba(255, 122, 24, 0.35));
 }
 
 @keyframes slideFromTop {
@@ -26,16 +33,16 @@
   }
 }
 
-/* IMAGE FROM RIGHT */
 .img-right {
   position: absolute;
   top: 50%;
   left: 55%;
-  width: clamp(120px, 20vw, 180px);
+  width: clamp(120px, 18vw, 180px);
   transform: translate(180%, -50%);
   animation: slideFromRight 1.2s ease forwards;
   animation-delay: 0.4s;
   z-index: 1;
+  filter: drop-shadow(0 0 18px rgba(204, 255, 0, 0.25));
 }
 
 @keyframes slideFromRight {
@@ -44,58 +51,83 @@
   }
 }
 
-/* TEXT ANIMATION */
+/* =========================
+   TEXT BASE
+========================= */
 .intro-text {
   position: absolute;
-  bottom: 12%;
   opacity: 0;
-  font-size: clamp(1.6rem, 5vw, 2.8rem);
-  animation: textFade 1s ease forwards;
-  animation-delay: 1.5s;
   text-align: center;
-    font-family: 'Poppins', sans-serif;
+  animation: textFade 1s ease forwards;
+  font-family: "Poppins", sans-serif;
 }
 
 @keyframes textFade {
   from {
-    transform: translateY(20px) scale(0.95);
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
   }
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
 }
-/* Text color helpers */
+
+/* =========================
+   TITLE
+========================= */
+.title {
+  bottom: 18%;
+  font-size: clamp(1.9rem, 5vw, 3rem);
+  font-weight: 800;
+  letter-spacing: 3px;
+  animation-delay: 1.5s;
+}
+
+/* Brand Colors */
 .orange {
-  color: #ef4444; /* red */
+  color: #ff7a18;
+  text-shadow: 0 0 16px rgba(255, 122, 24, 0.55);
 }
 
 .yellow {
-  color: #f59e0b; /* yellow */
-}
-.green{
-    color: #10b981; /* green */
-}
-.sky{
-    color: #0ea5e9; /* sky */
-}
-.pink{
-    color: #cf3482; /* pink */
-}
-/* Title styling */
-.title {
-  bottom: 18%;
-  letter-spacing: 2px;
-  font-weight: 700;
+  color: #ccff00;
+  text-shadow: 0 0 18px rgba(204, 255, 0, 0.6);
 }
 
-/* Subtitle styling */
+.light {
+  color: #f8fafc;
+  opacity: 0.9;
+}
+
+.space {
+  display: inline-block;
+  width: 10px;
+}
+
+/* =========================
+   SUBTITLE
+========================= */
 .subtitle {
-  bottom: 10%;
-  font-size: clamp(1rem, 3vw, 1.4rem);
+  bottom: 11%;
+  font-size: clamp(1rem, 3vw, 1.35rem);
   font-weight: 400;
-  color: #d1d5db;
+  color: #9ca3af;
+  letter-spacing: 1px;
   animation-delay: 1.9s;
-  
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, sans-serif;
+  font-style: italic;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 480px) {
+  .title {
+    bottom: 22%;
+    letter-spacing: 2px;
+  }
+
+  .subtitle {
+    bottom: 14%;
+  }
 }

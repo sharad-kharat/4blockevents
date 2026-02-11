@@ -1,0 +1,93 @@
+/* Slide-in container */
+.contact-bar {
+  position: fixed;
+  right: -100px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1000;
+  transition: right 0.6s ease;
+}
+
+.contact-bar.show {
+  right: 30px;
+}
+
+/* Glassmorphism Base */
+.icon {
+  position: relative;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Floating bounce effect */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+/* 3D Rotate on hover */
+.icon:hover {
+  transform: rotateY(180deg) scale(1.1);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* Brand colors overlay */
+.call {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.whatsapp {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+.instagram {
+  background: linear-gradient(135deg, #feda75, #d62976, #962fbf);
+}
+
+/* WhatsApp blinking ring */
+/* Make sure icon is relative */
+.icon {
+  position: relative;
+}
+
+/* Ring effect for all icons */
+.icon:hover::after {
+  content: "";
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 3px solid currentColor;
+  animation: blinkRing 1.5s infinite;
+}
+
+/* Animation */
+@keyframes blinkRing {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}

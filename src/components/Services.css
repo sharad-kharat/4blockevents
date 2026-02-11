@@ -1,92 +1,164 @@
-/* DARK GRADIENT BACKGROUND */
+/* SECTION */
 .services-section {
   min-height: 100vh;
+  background: radial-gradient(circle at top, #111, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 60px 20px;
-  background: radial-gradient(circle at top, #111 0%, #000 60%);
-  color: #e5e7eb;
-  font-family: "Poppins", sans-serif;
 }
 
-/* TITLE */
-.services-title {
-  text-align: center;
-  margin-bottom: 40px;
-  letter-spacing: 3px;
-}
-
-/* CONTAINER */
-.services-container {
+/* WRAPPER */
+.services-wrapper {
+  width: 100%;
+  max-width: 900px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  justify-content: center;
+  flex-direction: column;
+  gap: 26px;
 }
 
-/* SERVICE PILL */
-.service-pill {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 16px 26px;
-  border-radius: 999px;
-  background: #050505;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-/* MOVING GLOW BORDER */
-.service-pill::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border-radius: inherit;
-  background: conic-gradient(
-    from 0deg,
-    transparent,
-    var(--glow-color),
-    transparent
-  );
-  animation: rotateGlow 3s linear infinite;
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 0.3s ease;
-}
-
-.service-pill:hover::before {
-  opacity: 1;
-}
-
-@keyframes rotateGlow {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* ICON */
-.pill-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: #111;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--glow-color);
-  box-shadow: 0 0 0 transparent;
-  transition: box-shadow 0.3s ease;
-}
-
-.service-pill:hover .pill-icon {
-  box-shadow: 0 0 14px var(--glow-color);
-}
-
-/* TEXT */
-.pill-text {
-  font-size: 0.95rem;
-  letter-spacing: 0.5px;
-}
+/* LINK RESET */
 .service-link {
   text-decoration: none;
   color: inherit;
+}
+
+/* NEON CARD BASE */
+.neon-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #0b0b0b;
+  padding: 10px;
+}
+
+/* IMAGE */
+.neon-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 14px;
+  opacity: 0.9;
+}
+
+/* FEATURED */
+.neon-large {
+  height: 280px;
+}
+
+.neon-large h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+  font-size: 2.6rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #e5e7eb;
+  text-shadow: 0 0 20px rgba(255, 180, 80, 0.6);
+}
+
+/* SMALL ROW */
+.neon-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.neon-row .neon-card {
+  height: 160px;
+}
+
+.neon-row span {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ccff00;
+}
+
+/* =========================
+   NEON CORNERS (ANIMATED)
+========================= */
+.neon-card::before,
+.neon-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* TOP-LEFT CORNER */
+.neon-card::before {
+  background:
+    linear-gradient(90deg, #ff7a18, #ccff00, #ff7a18)
+      top left / 80px 2px no-repeat,
+    linear-gradient(180deg, #ff7a18, #ccff00, #ff7a18)
+      top left / 2px 80px no-repeat;
+}
+
+/* BOTTOM-RIGHT CORNER */
+.neon-card::after {
+  background:
+    linear-gradient(270deg, #ccff00, #ff7a18, #ccff00)
+      bottom right / 80px 2px no-repeat,
+    linear-gradient(0deg, #ccff00, #ff7a18, #ccff00)
+      bottom right / 2px 80px no-repeat;
+}
+
+/* HOVER START ANIMATION */
+.neon-card:hover::before {
+  opacity: 1;
+  animation: neonMoveTL 2.8s linear infinite;
+}
+
+.neon-card:hover::after {
+  opacity: 1;
+  animation: neonMoveBR 2.8s linear infinite;
+}
+
+/* =========================
+   KEYFRAMES
+========================= */
+@keyframes neonMoveTL {
+  from {
+    background-position: 0% 0%, 0% 0%;
+  }
+  to {
+    background-position: 100% 0%, 0% 100%;
+  }
+}
+
+@keyframes neonMoveBR {
+  from {
+    background-position: 100% 100%, 100% 100%;
+  }
+  to {
+    background-position: 0% 100%, 100% 0%;
+  }
+}
+
+
+/* HOVER GLOW */
+.neon-card:hover {
+  box-shadow:
+    0 0 20px rgba(255, 122, 24, 0.4),
+    0 0 40px rgba(204, 255, 0, 0.15);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .neon-large {
+    height: 220px;
+  }
+
+  .neon-large h2 {
+    font-size: 1.8rem;
+  }
+
+  .neon-row {
+    grid-template-columns: 1fr;
+  }
 }
