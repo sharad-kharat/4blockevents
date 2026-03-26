@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 import './HomeEventsCarousel.css';
 
 import corporateImg from '../../assets/whatwedo/corprate.png';
-import sportsImg from '../../assets/whatwedo/sport.png';
+import sportsImg from '../../assets/whatwedo/sport.jpeg';
 import artistImg from '../../assets/whatwedo/artestmanagment.png';
 import themewedding from '../../assets/whatwedo/themwedding.webp'
 import exibiction from '../../assets/whatwedo/exibiction.jpeg'
+import persnol from '../../assets/whatwedo/persnolevent.jpeg'
 const events = [
   {
     title: "Corporate Events",
@@ -30,7 +31,7 @@ const events = [
   },
   {
     title: "Personal Events",
-    image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2098&auto=format&fit=crop",
+    image: persnol,
     link: "/contact"
   },
   {

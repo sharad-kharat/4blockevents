@@ -49,14 +49,14 @@ const teamMembers = [
   },
   {
     id: 6,
-    name: "Meet Kabra",
+    name: "Mrs. Meet Kabra",
     role: "Purchase Head",
     image: purchaseImg,  
     bio: "Sourcing the highest quality materials and coordinating essential event logistics.",
   },
   {
     id: 7,
-    name: "Mr. Khan",
+    name: "Mr. SP Khan",
     role: "Inventory Manager",
     image: inventoryImg,  
     bio: "Managing assets and resources to keep our event production running smoothly.",

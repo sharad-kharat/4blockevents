@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { HiMenu, HiX, HiChevronDown } from "react-icons/hi";
 import "./Navbar.css";
 import logoImg from "../assets/Logo/Logo1.png";
@@ -26,7 +26,7 @@ export default function Navbar() {
         <Link to="/" className="nav-logo">
           <img src={logoImg} alt="4 BLOCK Events Logo" className="logo-img" />
           <div className="logo-text-container">
-            <span className="logo-text">4 BLOCKS Event</span>
+            <span className="logo-text">4 BLOCKS EVENT</span>
             <span className="logo-subtext">Delivering Everlasting Memories.</span>
           </div>
         </Link>
@@ -98,43 +98,62 @@ export default function Navbar() {
 
       </div>
 
-      {/* Mobile Menu */}
-      {mobileOpen && (
-        <motion.div
-          className="mobile-menu"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
+      {/* Mobile Menu Backdrop and Drawer */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <>
+            {/* Clickable Backdrop Overlay */}
+            <motion.div
+              className="mobile-backdrop"
+              onClick={() => setMobileOpen(false)}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            />
 
-          {links.map((link) => {
-            if (link.path.startsWith('/#')) {
-              return (
-                <a
-                  key={link.name}
-                  href={link.path}
-                  onClick={() => setMobileOpen(false)}
-                  className="mobile-link"
-                >
-                  {link.name}
-                </a>
-              );
-            }
-            return (
-              <Link
-                key={link.name}
-                to={link.path}
-                onClick={() => setMobileOpen(false)}
-                className="mobile-link"
-              >
-                {link.name}
-              </Link>
-            );
-          })}
+            {/* Side Drawer */}
+            <motion.div
+              className="mobile-menu drawer"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            >
+              <div className="drawer-header">
+                <button className="mobile-close-btn" onClick={() => setMobileOpen(false)}>
+                  <HiX size={32} />
+                </button>
+              </div>
 
-
-
-        </motion.div>
-      )}
+              {links.map((link) => {
+                if (link.path.startsWith('/#')) {
+                  return (
+                    <a
+                      key={link.name}
+                      href={link.path}
+                      onClick={() => setMobileOpen(false)}
+                      className="mobile-link"
+                    >
+                      {link.name}
+                    </a>
+                  );
+                }
+                return (
+                  <Link
+                    key={link.name}
+                    to={link.path}
+                    onClick={() => setMobileOpen(false)}
+                    className="mobile-link"
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

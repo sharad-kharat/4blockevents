@@ -74,19 +74,6 @@ const Contact = () => {
           </motion.div>
         </div>
 
-        {/* Bottom Row: Map */}
-        <motion.div className="contact-bottom-row" variants={itemVariants}>
-          <h2 className="contact-heading text-center md:text-left">Visit Our Office</h2>
-          <div className="map-box">
-            <iframe
-              title="4 Block Group Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m2!1m3!1d15124.939226500228!2d73.81665476081048!3d18.60855214041128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b8853b08acbd%3A0xe5a3c9a625feea4!2sPimpri-Chinchwad%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </motion.div>
       </motion.div>
 
       {/* Footer Links */}

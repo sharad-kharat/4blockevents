@@ -109,9 +109,7 @@ const OurWork = () => {
            transition={{ duration: 0.8 }}
            className="our-work-intro-content"
         >
-          <span className="our-work-badge">
-            DEEP ANALYSIS
-          </span>
+          
           <h1 className="our-work-title">
             OUR WORK
           </h1>

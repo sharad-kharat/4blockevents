@@ -48,14 +48,14 @@ const HomeFooter = () => {
           <div className="footer-contact-block">
             <h4>Customer Care</h4>
             <p>+91 8855844448</p>
-            <p>+91 9021351689</p>
+            <p>+91 8975940005</p>
           </div>
 
           <div className="footer-contact-block">
             <h4>Email Inquiries</h4>
             <p><strong>General:</strong> 4blocksevents@gmail.com</p>
-            <p><strong>Corporate:</strong> SNEHAL.4BLOCKSEVENTS@GMAIL.COM</p>
-            <p><strong>Weddings:</strong> SHREYAS.4BLOCKSEVENT@GMAIL.COM</p>
+            <p><strong>Corporate:</strong>snehal.4blocksevents@gmail.com</p>
+            <p><strong>Weddings:</strong>shreyas.4blocksevent@gmail.com</p>
           </div>
         </div>
 

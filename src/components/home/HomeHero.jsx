@@ -4,8 +4,8 @@ import './HomeHero.css';
 import logoImg from '../../assets/Logo/Logo1.png';
 
 import homehero1 from '../../assets/Home/homehero/homehero1.png';
-import homehero2 from '../../assets/Home/homehero/homehero2.png';
-import homehero3 from '../../assets/Home/homehero/homehero3.jpg';
+import homehero2 from '../../assets/Home/homehero/homehero2.jpg';
+import homehero3 from '../../assets/Home/homehero/homehero3.jpeg';
 
 const slides = [
   {
