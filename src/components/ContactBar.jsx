@@ -11,6 +11,8 @@ const ContactBar = () => {
     }, 300);
   }, []);
 
+
+  
   return (
     <div className={`contact-bar ${visible ? "show" : ""}`}>
       <a href="tel:+919067785123" className="icon call">

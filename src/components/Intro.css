@@ -4,7 +4,7 @@
 .intro-container {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at top, #111 0%, #000 65%);
+  background: radial-gradient(circle at top, #e4e2e2 0%, #f7f6f6 65%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,13 +18,13 @@
 ========================= */
 .img-top {
   position: absolute;
-  top: 42%;
-  left: 50%;
+  top: 30%;
+  left: 45%;
   width: clamp(120px, 18vw, 180px);
   transform: translate(-50%, -180%);
   animation: slideFromTop 1.2s ease forwards;
   z-index: 2;
-  filter: drop-shadow(0 0 18px rgba(255, 122, 24, 0.35));
+  /* filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.7)) drop-shadow(0 0 6px rgba(255, 122, 24, 0.15)); */
 }
 
 @keyframes slideFromTop {
@@ -35,14 +35,14 @@
 
 .img-right {
   position: absolute;
-  top: 50%;
-  left: 55%;
+  top: 46%;
+  left: 51%;
   width: clamp(120px, 18vw, 180px);
   transform: translate(180%, -50%);
   animation: slideFromRight 1.2s ease forwards;
   animation-delay: 0.4s;
   z-index: 1;
-  filter: drop-shadow(0 0 18px rgba(204, 255, 0, 0.25));
+  /* filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.7)) drop-shadow(0 0 6px rgba(204, 255, 0, 0.1)); */
 }
 
 @keyframes slideFromRight {
@@ -67,6 +67,7 @@
     opacity: 0;
     transform: translateY(20px) scale(0.96);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -91,8 +92,17 @@
 }
 
 .yellow {
-  color: #ccff00;
+  color: #E9AD17;
   text-shadow: 0 0 18px rgba(204, 255, 0, 0.6);
+}
+
+.gradient-text {
+  background: #ff7a18;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: drop-shadow(0 0 12px rgba(255, 122, 24, 0.5));
 }
 
 .light {
@@ -106,16 +116,56 @@
 }
 
 /* =========================
+   PROGRESS LINE
+========================= */
+.progress-line-container {
+  position: absolute;
+  bottom: 15.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(250px, 40vw, 500px);
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.progress-line {
+  height: 2px;
+  background-color: #f7a708;
+  width: 0;
+  border-radius: 0;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  animation: expandLine 1.2s ease forwards 1.7s;
+
+
+  height: 2px;
+  /* This creates a sharp, fading point at both ends */
+  background: linear-gradient(90deg, transparent 0%, #e69706 15%, #e69706 85%, transparent 100%);
+  width: 0;
+  border-radius: 0;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  animation: expandLine 1.2s ease forwards 1.7s;
+
+
+}
+
+@keyframes expandLine {
+  to {
+    width: 100%;
+  }
+}
+
+/* =========================
    SUBTITLE
 ========================= */
 .subtitle {
-  bottom: 11%;
-  font-size: clamp(1rem, 3vw, 1.35rem);
-  font-weight: 400;
-  color: #9ca3af;
-  letter-spacing: 1px;
+  font-family: 'Great Vibes', cursive;
+  bottom: 5%;
+  font-size: clamp(1.2rem, 3.2vw, 3rem);
+  font-weight: 700;
+  color: #fbbf24;
+  letter-spacing: 1.5px;
   animation-delay: 1.9s;
-  font-style: italic;
 }
 
 /* =========================
@@ -130,4 +180,51 @@
   .subtitle {
     bottom: 14%;
   }
+
+  .progress-line-container {
+    bottom: 18.5%;
+    width: 80vw;
+  }
+
+  /* =========================
+   MOBILE
+========================= */
+
+  /* ... existing code for title & subtitle ... */
+  .title {
+    bottom: 35%;
+    letter-spacing: 2px;
+    font-size: 2.3rem;
+    /* Add this to force a specific size on mobile */
+  }
+
+  .subtitle {
+    bottom: 26%;
+    font-size: 1.5rem;
+    /* Add this to force a specific size on mobile */
+  }
+
+  .progress-line-container {
+    bottom: 33%;
+    /* Move it up or down to align with your newly spaced text */
+    width: 80vw;
+    /* Make it take up 80% of the screen width on mobile */
+  }
+
+  /* Add your image logic here for mobile phones! */
+  .img-top {
+    top: 25%;
+    left: 40%;
+    width: 130px;
+    /* overrides clamp */
+  }
+
+  .img-right {
+    top: 38%;
+    left: 52%;
+    width: 130px;
+    /* overrides clamp */
+  }
+
+
 }

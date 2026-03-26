@@ -1,0 +1,280 @@
+/* ======================================================
+   ROOT DESIGN SYSTEM (Brand Variables)
+====================================================== */
+
+:root {
+  --bg-primary: #000000;
+  --bg-card: #111111;
+  --bg-hover: #1a1a1a;
+
+  --brand-green: #7CFC00;
+  --brand-orange: #FF6A00;
+  --brand-orange-dark: #FF4500;
+
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+
+  --radius-lg: 20px;
+  --radius-md: 14px;
+
+  --transition: 0.3s ease;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 20px rgba(124, 252, 0, 0.3);
+}
+
+/* ======================================================
+   GLOBAL
+====================================================== */
+
+.furniture-page {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ======================================================
+   BRAND HEADER
+====================================================== */
+
+.brand-header {
+  text-align: center;
+  padding: 35px 20px;
+  border-bottom: 1px solid #1c1c1c;
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+}
+
+/* Animated Glow Logo */
+.glow-logo {
+  font-size: clamp(26px, 5vw, 42px);
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: var(--brand-green);
+  text-transform: uppercase;
+  animation: glowPulse 2s infinite alternate;
+}
+
+@keyframes glowPulse {
+  from {
+    text-shadow: 0 0 8px var(--brand-green);
+  }
+  to {
+    text-shadow: 0 0 25px lime;
+  }
+}
+
+/* ======================================================
+   HERO SECTION
+====================================================== */
+
+.furniture-hero {
+  text-align: center;
+  padding: 100px 20px 60px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero-content h2 {
+  font-size: clamp(22px, 4vw, 36px);
+  margin-bottom: 12px;
+}
+
+.hero-content p {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+/* ======================================================
+   PRODUCT SECTION
+====================================================== */
+
+.product-section {
+  padding: 80px 8%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 50px;
+  color: var(--brand-orange);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Grid Layout */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 35px;
+}
+
+/* ======================================================
+   PRODUCT CARD
+====================================================== */
+
+.product-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--transition),
+              box-shadow var(--transition),
+              background var(--transition);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  background: var(--bg-hover);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Image Container */
+.product-img {
+  overflow: hidden;
+  position: relative;
+}
+
+.product-img img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Product Info */
+.product-info {
+  padding: 25px;
+  text-align: center;
+}
+
+.product-info h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.product-info p {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--brand-green);
+  margin-bottom: 18px;
+}
+
+/* ======================================================
+   ADD TO CART BUTTON
+====================================================== */
+
+.cart-btn {
+  background: linear-gradient(
+    135deg,
+    var(--brand-orange),
+    var(--brand-orange-dark)
+  );
+  border: none;
+  padding: 12px 22px;
+  border-radius: 40px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.cart-btn:hover {
+  box-shadow: 0 0 18px var(--brand-orange);
+  transform: scale(1.05);
+}
+
+/* ======================================================
+   FLOATING CONTACT BAR
+====================================================== */
+
+.contact-bar {
+  position: fixed;
+  right: 25px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  z-index: 9999;
+}
+
+.icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: var(--shadow-soft);
+}
+
+.icon:hover {
+  transform: scale(1.15);
+}
+
+/* Brand Icon Colors */
+.call {
+  background: #007bff;
+}
+
+.whatsapp {
+  background: #25D366;
+}
+
+.instagram {
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #d62976,
+    #962fbf
+  );
+}
+
+/* ======================================================
+   RESPONSIVE BREAKPOINTS
+====================================================== */
+
+@media (max-width: 768px) {
+  .product-section {
+    padding: 60px 5%;
+  }
+
+  .product-info {
+    padding: 18px;
+  }
+
+  .icon {
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .glow-logo {
+    font-size: 22px;
+  }
+
+  .hero-content h2 {
+    font-size: 20px;
+  }
+}

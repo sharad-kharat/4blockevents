@@ -1,0 +1,245 @@
+/* HomeFooter.css */
+
+.footer-section {
+  background-color: #1a1e21;
+  /* Deep luxury dark gray */
+  color: #e5e7eb;
+  padding: 6rem 1.5rem 0 1.5rem;
+  /* Large top padding, 0 bottom padding so the bottom bar touches the end */
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  /* Subtle border for separation */
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-container {
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 4rem;
+  }
+}
+
+/* Brand Column */
+.footer-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-logo-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 30%;
+  background-color: white;
+  /* Contrast against dark footer */
+  padding: 4px;
+  box-shadow: 0 4px 15px rgba(200, 155, 60, 0.2);
+}
+
+.footer-logo-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 800;
+  background: linear-gradient(90deg, #c89b3c, #fcd34d, #c89b3c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+}
+
+.footer-tagline {
+  font-family: 'Great Vibes', cursive;
+  font-size: 18px;
+  font-weight: 400;
+  color: #c89b3c;
+  letter-spacing: 1px;
+  text-transform: none;
+  margin-top: -2px;
+}
+
+.footer-desc {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  color: #9ca3af;
+  line-height: 1.8;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  max-width: 300px;
+}
+
+/* Social Links */
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #c89b3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  border: 1px solid rgba(200, 155, 60, 0.2);
+  text-decoration: none;
+}
+
+.footer-social-icon:hover {
+  background-color: #c89b3c;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(200, 155, 60, 0.3);
+}
+
+/* General Titles */
+.footer-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05em;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 2.5rem;
+  height: 2px;
+  background-color: #c89b3c;
+}
+
+/* Links List */
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-list li a {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+  display: inline-block;
+}
+
+.footer-list li a:hover {
+  color: #c89b3c;
+  padding-left: 5px;
+}
+
+/* Contact Blocks */
+.footer-contact-block {
+  margin-bottom: 1.5rem;
+}
+
+.footer-contact-block h4 {
+  color: #c89b3c;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.footer-contact-block p {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0.25rem;
+}
+
+.footer-contact-block p strong {
+  color: #d1d5db;
+  font-weight: 500;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #121517;
+  /* Even darker for pure contrast at very bottom */
+  padding: 1.5rem 0;
+  /* Changed so we can use margin to center content */
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.footer-bottom-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom-content {
+    flex-direction: row;
+  }
+}
+
+.copyright {
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.legal-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.legal-links a {
+  color: #6b7280;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+  color: #c89b3c;
+}

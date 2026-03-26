@@ -1,0 +1,134 @@
+/* HomeEvents.css */
+/* Shares structural logic with why-section but with its own classes for isolation */
+.events-section {
+  padding: 6rem 1.5rem;
+  background-color: var(--corporate-light);
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .events-section {
+    padding: 6rem 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .events-section {
+    padding: 7rem 6rem;
+  }
+}
+
+.events-container {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .events-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+  }
+}
+
+.events-text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  order: 2;
+  /* Mobile order */
+  max-width: 500px;
+}
+
+@media (min-width: 1024px) {
+  .events-text-content {
+    order: 2;
+    /* Desktop right text */
+  }
+}
+
+.events-title {
+  color: var(--corporate-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  position: relative;
+  display: inline-block;
+}
+
+.events-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: var(--corporate-gold);
+  transition: width 0.4s ease;
+}
+
+.events-section:hover .events-title::after {
+  width: 100px;
+}
+
+.events-desc {
+  color: var(--corporate-text-muted);
+  line-height: 1.8;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .events-desc {
+    font-size: 1rem;
+  }
+}
+
+.events-btn-container {
+  padding-top: 1rem;
+}
+
+.events-image-wrapper {
+  flex: 1;
+  width: 100%;
+  order: 1;
+  /* Mobile order */
+}
+
+@media (min-width: 1024px) {
+  .events-image-wrapper {
+    order: 1;
+    /* Desktop left image */
+  }
+}
+
+.events-image-container {
+  position: relative;
+  aspect-ratio: 4/3;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.events-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.events-image-container:hover .events-image {
+  transform: scale(1.05);
+  /* Match subtle zoom */
+}
+
+.events-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0.2), transparent);
+  pointer-events: none;
+}

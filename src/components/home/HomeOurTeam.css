@@ -1,0 +1,248 @@
+/* HomeOurTeam.css */
+
+.our-team-section {
+  padding: clamp(4rem, 8vw, 8rem) clamp(1.5rem, 5vw, 4rem);
+  background-color: #ffffff;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  /* Set default body font */
+}
+
+.our-team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.our-team-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.our-team-subtitle {
+  color: #7b1e3b;
+  /* Luxury maroon */
+  font-size: 0.875rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.our-team-title {
+  font-family: 'Playfair Display', serif;
+  /* Luxury Serif Font */
+  font-size: 2.5rem;
+  color: #c89b3c;
+  /* Luxury gold */
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .our-team-title {
+    font-size: 3rem;
+  }
+}
+
+.our-team-divider {
+  width: 60px;
+  height: 3px;
+  background-color: #c89b3c;
+  /* Gold divider */
+  margin: 0 auto;
+}
+
+.our-team-description {
+  margin-top: 1.5rem;
+  max-width: 800px;
+  color: #4b5563;
+  line-height: 1.8;
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Owner Layout */
+.owner-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .owner-card {
+    width: 100% !important;
+    max-width: 380px !important;
+  }
+}
+
+/* Grid Layout */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Card Styles */
+.team-card {
+  width: 100%;
+  max-width: 320px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  font-family: 'Inter', sans-serif;
+}
+
+@media (min-width: 640px) {
+  .team-card {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .team-card {
+    width: calc(33.333% - 1.333rem);
+  }
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Wrapper and Hover Overlay */
+.team-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/5;
+  /* Slightly more balanced aspect ratio to reduce excessive height */
+  overflow: hidden;
+}
+
+.team-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.team-card:hover .team-image {
+  transform: scale(1.05);
+}
+
+/* Social Icons Overlay */
+.team-social-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(123, 30, 59, 0.75);
+  /* Maroon overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.team-card:hover .team-social-overlay {
+  opacity: 1;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  color: #7b1e3b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* Bouncy entrance */
+}
+
+/* Staggered animation for the icons on hover */
+.team-card:hover .social-icon:nth-child(1) {
+  transition-delay: 0.1s;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.team-card:hover .social-icon:nth-child(2) {
+  transition-delay: 0.15s;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.team-card:hover .social-icon:nth-child(3) {
+  transition-delay: 0.2s;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.social-icon:hover {
+  background: #c89b3c;
+  /* Gold on hover */
+  color: white;
+  transform: translateY(-3px) !important;
+  /* Override the bouncy transform */
+}
+
+/* Info Section */
+.team-info {
+  padding: 1.5rem;
+  text-align: center;
+  background: #fdfdfd;
+}
+
+.team-name {
+  font-family: 'Playfair Display', serif;
+  /* Luxury Serif Font */
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1f2937;
+  /* Dark gray */
+  margin-bottom: 0.25rem;
+}
+
+.team-role {
+  color: #c89b3c;
+  /* Gold role text */
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  min-height: 40px;
+  /* Aligns dividers nicely when roles wrap */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-bio-divider {
+  width: 30px;
+  height: 2px;
+  background-color: #e5e7eb;
+  margin: 0 auto 1rem auto;
+}
+
+.team-bio {
+  font-family: 'Inter', sans-serif;
+  color: #6b7280;
+  /* Medium gray */
+  font-size: 0.85rem;
+  line-height: 1.6;
+}

@@ -1,0 +1,19 @@
+/* HomeContactMap.css */
+
+.contact-title {
+  color: var(--luxury-gold);
+  letter-spacing: 0.05em;
+}
+
+.contact-icon {
+  color: #b8860b; /* A darker golden-brown for the icons */
+}
+
+.contact-link {
+  color: var(--luxury-border); /* Usually dark text for numbers/emails */
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: var(--luxury-gold);
+}

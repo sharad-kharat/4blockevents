@@ -3,7 +3,7 @@
 ========================= */
 .sticky-header {
   position: sticky;
-  top: 0;
+  top: 70px;
   z-index: 100;
   padding: 30px 0 24px;
   background: linear-gradient(

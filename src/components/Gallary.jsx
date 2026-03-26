@@ -4,9 +4,9 @@ import Lightbox from "./Lightbox";
 import "./gallary.css";
 const imageCount = {
   wedding: 12,
-  haldi: 8,
-  sangeet: 8,
-  vidai: 6,
+  haldi: 13,
+  sangeet: 13,
+  vidai: 13,
 };
 
 const Gallery = ({ category }) => {

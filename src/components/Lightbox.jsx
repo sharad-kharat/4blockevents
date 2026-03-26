@@ -3,15 +3,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 import "./Lightbox.css";
 
-const Lightbox = ({ images, index, onClose }) => {
+const Lightbox = ({ items, index, onClose }) => {
   const [current, setCurrent] = useState(index);
 
   const next = () =>
-    setCurrent((prev) => (prev + 1) % images.length);
+    setCurrent((prev) => (prev + 1) % items.length);
 
   const prev = () =>
     setCurrent((prev) =>
-      prev === 0 ? images.length - 1 : prev - 1
+      prev === 0 ? items.length - 1 : prev - 1
     );
 
   // 🔑 Keyboard navigation
@@ -31,6 +31,8 @@ const Lightbox = ({ images, index, onClose }) => {
     onSwipedRight: prev,
     trackMouse: true,
   });
+
+  const currentItem = items[current];
 
   return (
     <motion.div
@@ -54,17 +56,33 @@ const Lightbox = ({ images, index, onClose }) => {
         ‹
       </button>
 
-      {/* Image */}
+      {/* Media item */}
       <AnimatePresence mode="wait">
-        <motion.img
-          key={current}
-          src={images[current]}
-          className="lightbox-img"
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.25 }}
-        />
+        {currentItem.type === 'video' ? (
+          <motion.video
+            key={current}
+            src={currentItem.src}
+            className="lightbox-img" /* reuse class for positioning */
+            controls
+            autoPlay
+            playsInline
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            style={{ maxHeight: '85vh', maxWidth: '90vw', objectFit: 'contain' }}
+          />
+        ) : (
+          <motion.img
+            key={current}
+            src={currentItem.src}
+            className="lightbox-img"
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+          />
+        )}
       </AnimatePresence>
 
       {/* Next */}

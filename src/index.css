@@ -1,27 +1,40 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* Global reset */
-html, body {
-  margin: 0;
-  padding: 0;
-  background-color: #000;
+:root {
+  /* Corporate Theme Variables */
+  --corporate-dark: #111827; 
+  --corporate-light: #f8fafc; 
+  --corporate-gold: #cda434; 
+  --corporate-gold-hover: #b8860b;
+  --corporate-text-muted: #4b5563;
+
+  /* Luxury Theme Variables */
+  --luxury-bg: #fdfbf2; 
+  --luxury-gold: #c89745; 
+  --luxury-maroon: #702e28; 
+  --luxury-text: #4a4a4a; 
+  --luxury-border: #333333;
 }
 
-
-
-
-@keyframes borderMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 200% 50%;
-  }
+html {
+  scroll-behavior: smooth; /* Premium smooth scrolling */
 }
 
-.animate-border {
-  background-size: 200% 200%;
-  animation: borderMove 6s linear infinite;
+body {
+  background-color: var(--luxury-bg);
+  color: var(--corporate-dark);
+  
+  /* Font smoothing for crisp, beautiful text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+  /* Prevent random layout jumping and scrolling horizontal issues */
+  overflow-x: hidden;
+}
+
+/* GPU Acceleration class for heavy framer animations */
+.gpu-accelerate {
+  will-change: transform, opacity;
+  transform: translateZ(0);
 }

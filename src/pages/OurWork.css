@@ -1,0 +1,145 @@
+/* =========================
+   OUR WORK PAGE
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap');
+
+.our-work-page {
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+  font-family: sans-serif;
+  color: #1f2937;
+}
+
+/* =========================
+   INTRO / DEEP ANALYSIS
+========================= */
+
+.our-work-intro {
+  text-align: center;
+  padding: 1rem 1.5rem;
+  background-color: #ffffff;
+}
+
+.our-work-intro-content {
+  max-width: 64rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.our-work-badge {
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.85rem;
+  color: #a37930;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.our-work-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+
+  /* Gold Gradient Text */
+  background: linear-gradient(to right, #deaf5f, #c69b46, #a37930);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (min-width: 768px) {
+  .our-work-title {
+    font-size: 4.5rem;
+  }
+}
+
+.our-work-desc {
+  font-family: 'Inter', sans-serif;
+  color: #4b5563;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .our-work-desc {
+    font-size: 1.15rem;
+  }
+}
+
+.our-work-desc-br {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .our-work-desc-br {
+    display: block;
+  }
+}
+
+/* =========================
+   CATEGORY HEADER OVERRIDES
+========================= */
+/* Specific overrides for the Sticky categories used in Our Work */
+.our-work-sticky-wrap {
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+.our-work-category-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #6b7280 !important;
+  text-shadow: none !important;
+}
+
+.our-work-category-btn:hover {
+  color: #c89b3c !important;
+  text-shadow: none !important;
+}
+
+.our-work-category-btn.active {
+  color: #c89b3c !important;
+  font-weight: 600;
+  text-shadow: none !important;
+}
+
+.our-work-category-btn::after {
+  display: none !important;
+}
+
+.active-line {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #c89b3c;
+  border-radius: 2px;
+}
+
+/* =========================
+   GALLERY GRID WRAPPER
+========================= */
+.our-work-gallery-wrap {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 2.5rem;
+}
+
+.our-work-gallery-card {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,197 @@
+/* SECTION */
+
+.events-carousel-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* TITLE */
+
+.events-carousel-title {
+  color: var(--luxury-gold);
+  letter-spacing: 0.15em;
+  position: relative;
+  display: inline-block;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Animated underline */
+
+.events-carousel-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: var(--luxury-gold);
+  transition: width 0.4s ease;
+}
+
+.events-carousel-section:hover .events-carousel-title::after {
+  width: 100%;
+  /* Dynamically matches the exact text width! */
+}
+
+/* CALL BUTTON */
+
+.btn-callnow {
+  padding: 0.7rem 3rem;
+  border: 2px solid var(--luxury-gold);
+  color: var(--luxury-gold);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+/* gold fill animation */
+
+.btn-callnow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--luxury-gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+.btn-callnow:hover::before {
+  transform: scaleX(1);
+}
+
+.btn-callnow:hover {
+  color: rgb(245, 162, 9);
+}
+
+/* CARD */
+
+.event-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE WRAPPER */
+
+.event-img-wrapper {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* overlay gradient */
+
+.event-img-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top,
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.05));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.event-card:hover .event-img-wrapper::after {
+  opacity: 1;
+}
+
+/* image animation */
+
+.event-img-wrapper img {
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.event-card:hover img {
+  transform: scale(1.12);
+}
+
+/* TITLE */
+
+.event-card-title {
+  color: var(--luxury-gold);
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+}
+
+.event-card:hover .event-card-title {
+  letter-spacing: 0.05em;
+}
+
+/* NAV BUTTONS */
+
+.nav-arrow-btn {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg,
+      #d8a04f,
+      #c89040);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(200, 150, 70, 0.35);
+}
+
+/* hover effect */
+
+.nav-arrow-btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 10px 22px rgba(200, 150, 70, 0.5);
+}
+
+/* arrow animation */
+
+.nav-arrow-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.nav-arrow-btn:hover svg {
+  transform: scale(1.2);
+}
+
+/* ENTRY ANIMATION */
+
+.event-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardFadeUp 0.8s ease forwards;
+}
+
+.event-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.event-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.event-card:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+@keyframes cardFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

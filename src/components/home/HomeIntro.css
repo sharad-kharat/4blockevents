@@ -1,0 +1,116 @@
+/* HomeIntro.css */
+.intro-section {
+  padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 6rem);
+  background-color: var(--corporate-light);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.04;
+}
+
+.intro-bg-glow-1,
+.intro-bg-glow-2 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+  animation: pulseGlow 8s infinite alternate ease-in-out;
+}
+
+.intro-bg-glow-1 {
+  top: 0;
+  left: 0;
+  width: 16rem;
+  height: 16rem;
+  background: rgba(205, 164, 52, 0.08);
+  /* Gold hint */
+  transform: translate(-50%, -50%);
+}
+
+.intro-bg-glow-2 {
+  bottom: 0;
+  right: 0;
+  width: 24rem;
+  height: 24rem;
+  background: rgba(17, 24, 39, 0.05);
+  /* Dark hint */
+  transform: translate(30%, 30%);
+  animation-delay: -4s;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1.5) translate(-30%, -30%);
+    opacity: 1;
+  }
+}
+
+.intro-content {
+  max-width: 64rem;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+.intro-title {
+  color: var(--corporate-gold);
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  position: relative;
+  display: inline-block;
+  font-family: "Playfair Display", serif;
+}
+
+.intro-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--corporate-gold);
+  margin: 1rem auto 0;
+  transition: width 0.4s ease;
+}
+
+.intro-section:hover .intro-title::after {
+  width: 100px;
+}
+
+.intro-text-wrapper {
+  color: var(--corporate-text-muted);
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.intro-text-highlight {
+  font-weight: 600;
+  color: var(--corporate-gold);
+  transition: color 0.3s ease;
+}
+
+.intro-text-highlight:hover {
+  color: var(--corporate-gold-hover);
+  text-shadow: 0 0 8px rgba(205, 164, 52, 0.4);
+}

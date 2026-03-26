@@ -1,0 +1,141 @@
+/* HomeClients.css */
+
+.home-clients-section {
+  padding: clamp(4rem, 8vw, 8rem) clamp(1.5rem, 5vw, 4rem);
+  background-color: #fafafa; /* Very light grey to contrast with pure white sections */
+  overflow: hidden;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+}
+
+.home-clients-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.clients-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clients-subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: #444444; /* Dark gray */
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.clients-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #c89b3c, #fcd34d, #c89b3c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.clients-divider {
+  width: 60px;
+  height: 3px;
+  background-color: #c89b3c; /* Gold divider */
+  margin: 0 auto;
+}
+
+/* Marquee Styles */
+.clients-marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 2rem 0;
+  
+  /* Soft fade effect on the left and right edges */
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.clients-marquee {
+  display: flex;
+  width: max-content;
+  align-items: flex-start; /* Align to top instead of center */
+}
+
+.clients-marquee-content {
+  display: flex;
+  align-items: flex-start; /* Align to top */
+  gap: 4rem;
+  padding-right: 4rem; /* Same as gap */
+  /* The animation speed determines how fast It scrolls. 40s is smooth. */
+  animation: scrollMarquee 40s linear infinite;
+}
+
+/* Pause the animation if the user hovers over it to read */
+.clients-marquee-wrapper:hover .clients-marquee-content {
+  animation-play-state: paused;
+}
+
+.client-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  min-width: 200px;
+  max-width: 240px;
+  cursor: pointer;
+}
+
+.client-item:hover {
+  transform: translateY(-5px);
+}
+
+.client-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Perfect round shape */
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Slight shadow to make it pop */
+}
+
+.client-item:hover .client-logo {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(200, 155, 60, 0.2);
+}
+
+.client-name {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #374151;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+  line-height: 1.4;
+}
+
+.client-item:hover .client-name {
+  color: #c89b3c;
+}
+
+/* Infinite Scrolling Animation */
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

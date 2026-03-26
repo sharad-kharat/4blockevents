@@ -1,7 +1,7 @@
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(26, 30, 33, 0.85); /* Changed from pure black to dark luxury */
   backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
@@ -11,11 +11,11 @@
 
 /* IMAGE */
 .lightbox-img {
-  max-width: 90vw;
-  max-height: 90vh;
+  max-width: 95vw; /* Make image bigger when open */
+  max-height: 95vh; /* Make image bigger when open */
   object-fit: contain;
   border-radius: 16px;
-  box-shadow: 0 0 40px rgba(255, 122, 24, 0.25);
+  box-shadow: 0 0 40px rgba(200, 155, 60, 0.25); /* Elegant gold glow */
 }
 
 /* NAV BUTTONS */
@@ -29,9 +29,9 @@
   border: none;
   cursor: pointer;
   font-size: 2.4rem;
-  color: #000;
-  background: linear-gradient(135deg, #ff7a18, #ccff00);
-  box-shadow: 0 0 20px rgba(255, 122, 24, 0.6);
+  color: #fff;
+  background: #c89b3c; /* Elegant gold instead of neon gradient */
+  box-shadow: 0 0 20px rgba(200, 155, 60, 0.6); /* Gold shadow */
   transition: transform 0.2s ease;
 }
 
