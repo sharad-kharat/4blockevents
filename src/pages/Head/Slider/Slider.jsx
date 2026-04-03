@@ -5,27 +5,27 @@ import { IoArrowBackOutline, IoArrowForwardOutline } from "react-icons/io5";
 const data = [
   {
     title: "Lossless Youths",
-    img: "https://images.pexels.com/photos/6837799/pexels-photo-6837799.jpeg",
+    img: "https://images.pexels.com/photos/6837799/pexels-photo-6837799.webp",
   },
   {
     title: "Estrange Bond",
-    img: "https://images.pexels.com/photos/325044/pexels-photo-325044.jpeg",
+    img: "https://images.pexels.com/photos/325044/pexels-photo-325044.webp",
   },
   {
     title: "The Gate Keeper",
-    img: "https://images.pexels.com/photos/1291515/pexels-photo-1291515.jpeg",
+    img: "https://images.pexels.com/photos/1291515/pexels-photo-1291515.webp",
   },
   {
     title: "Last Trace Of Us",
-    img: "https://images.pexels.com/photos/619419/pexels-photo-619419.jpeg",
+    img: "https://images.pexels.com/photos/619419/pexels-photo-619419.webp",
   },
   {
     title: "Urban Decay",
-    img: "https://images.pexels.com/photos/35888/amazing-beautiful-breathtaking-clouds.jpg",
+    img: "https://images.pexels.com/photos/35888/amazing-beautiful-breathtaking-clouds.webp",
   },
   {
     title: "The Migration",
-    img: "https://images.pexels.com/photos/1304642/pexels-photo-1304642.jpeg",
+    img: "https://images.pexels.com/photos/1304642/pexels-photo-1304642.webp",
   },
 ];
 

@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import './HomeIntro.css';
 
 // Import local assets
-import intro1 from '../../assets/Starter/intro1.png';
-import intro2 from '../../assets/Starter/intro2.png';
+import intro1 from '../../assets/Starter/intro1.webp';
+import intro2 from '../../assets/Starter/intro2.webp';
 
 const HomeIntro = () => {
   // Animation variants for text blocks
@@ -34,7 +34,7 @@ const HomeIntro = () => {
         viewport={{ once: true, amount: 0.3 }}
       >
         <img 
-          src="/images/logo.png" 
+          src="/images/logo.webp" 
           alt="Watermark Logo" 
           className="w-[80vw] h-[80vh] object-contain object-center scale-150"
           onError={(e) => {

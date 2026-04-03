@@ -9,11 +9,29 @@ import './OurWork.css';
 // No more 12-item limit! It automatically syncs everything in the folder.
 const mediaModules = import.meta.glob('/public/images/wedding/*.{jpg,jpeg,png,webp,mp4,mov,JPG,PNG,MP4}', { eager: true });
 
-const allMedia = Object.keys(mediaModules).map(filePath => {
+const allMediaMap = new Map();
+
+Object.keys(mediaModules).forEach(filePath => {
   const src = filePath.replace('/public', '');
   const type = filePath.match(/\.(mp4|mov)$/i) ? 'video' : 'image';
-  return { type, src };
-}).sort((a, b) => {
+  
+  // Extract filename without extension to detect duplicates 
+  const fileNameMatch = filePath.match(/\/([^\/]+)\.[a-zA-Z0-9]+$/);
+  if (fileNameMatch) {
+    let baseName = fileNameMatch[1];
+    if (baseName.endsWith('_web')) {
+      baseName = baseName.replace(/_web$/, '');
+    }
+    const isWebp = filePath.toLowerCase().endsWith('.webp');
+    const isWebVid = filePath.toLowerCase().endsWith('_web.mp4') || filePath.toLowerCase().endsWith('_web.mov');
+    // Store if it's the first time we see this image, OR prioritize the optimized .webp or _web formats
+    if (!allMediaMap.has(baseName) || isWebp || isWebVid) {
+      allMediaMap.set(baseName, { type, src });
+    }
+  }
+});
+
+const allMedia = Array.from(allMediaMap.values()).sort((a, b) => {
   if (a.type === 'image' && b.type === 'video') return -1;
   if (a.type === 'video' && b.type === 'image') return 1;
   return 0;

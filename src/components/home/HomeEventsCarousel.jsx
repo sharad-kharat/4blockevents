@@ -2,12 +2,12 @@ import { HiOutlineArrowRight, HiOutlineArrowLeft } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 import './HomeEventsCarousel.css';
 
-import corporateImg from '../../assets/whatwedo/corprate.png';
-import sportsImg from '../../assets/whatwedo/sport.jpeg';
-import artistImg from '../../assets/whatwedo/artestmanagment.png';
+import corporateImg from '../../assets/whatwedo/corprate.webp';
+import sportsImg from '../../assets/whatwedo/sport.webp';
+import artistImg from '../../assets/whatwedo/artestmanagment.webp';
 import themewedding from '../../assets/whatwedo/themwedding.webp'
-import exibiction from '../../assets/whatwedo/exibiction.jpeg'
-import persnol from '../../assets/whatwedo/persnolevent.jpeg'
+import exibiction from '../../assets/whatwedo/exibiction.webp'
+import persnol from '../../assets/whatwedo/persnolevent.webp'
 const events = [
   {
     title: "Corporate Events",

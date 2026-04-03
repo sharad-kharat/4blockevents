@@ -14,7 +14,7 @@ const Gallery = ({ category }) => {
 
   const images = Array.from(
     { length: imageCount[category] },
-    (_, i) => `/images/${category}/${i + 1}.jpg`
+    (_, i) => `/images/${category}/${i + 1}.webp`
   );
 
   return (

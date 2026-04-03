@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenu, HiX, HiChevronDown } from "react-icons/hi";
 import "./Navbar.css";
-import logoImg from "../assets/Logo/Logo1.png";
+import logoImg from "../assets/Logo/Logo1.webp";
 
 const links = [
   { name: "HOME", path: "/" },

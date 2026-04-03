@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn } from 'react-icons/fa';
-import logoImg from '../../assets/Logo/Logo1.png';
+import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn, FaPhoneAlt } from 'react-icons/fa';
+import logoImg from '../../assets/Logo/Logo1.webp';
 import './HomeFooter.css';
 
 const HomeFooter = () => {
@@ -47,15 +47,15 @@ const HomeFooter = () => {
           
           <div className="footer-contact-block">
             <h4>Customer Care</h4>
-            <p>+91 8855844448</p>
-            <p>+91 8975940005</p>
+            <p><a href="tel:+918855844448" style={{display: 'inline-flex', alignItems: 'center', gap: '8px'}}><FaPhoneAlt size={14}/> +91 8855844448</a></p>
+            <p><a href="tel:+918975940005" style={{display: 'inline-flex', alignItems: 'center', gap: '8px'}}><FaPhoneAlt size={14}/> +91 8975940005</a></p>
           </div>
 
           <div className="footer-contact-block">
             <h4>Email Inquiries</h4>
-            <p><strong>General:</strong> 4blocksevents@gmail.com</p>
-            <p><strong>Corporate:</strong>snehal.4blocksevents@gmail.com</p>
-            <p><strong>Weddings:</strong>shreyas.4blocksevent@gmail.com</p>
+            <p><strong>General:</strong><a href='mailto:support@4blocksevent.com'> support@4blocksevent.com</a></p>
+            <p><strong>Corporate:</strong><a href='mailto:snehal.4blocksevents@gmail.com'> snehal.4blocksevents@gmail.com </a></p>
+            <p><strong>Weddings:</strong><a href='mailto:shreyas.4blocksevent@gmail.com'> shreyas.4blocksevent@gmail.com </a></p>
           </div>
         </div>
 
@@ -74,8 +74,7 @@ const HomeFooter = () => {
           <div className="footer-contact-block">
             <h4>Permanent Address</h4>
             <p>
-              Building No.60, Flat No.08, Masulkar Colony, 
-              near Annapurna Hotel, Pimpri, Pune 411018.
+           BUILDING NO.60, FLAT NO.08, MASULKAR COLONY, NEAR ANNAPURNA HOTEL, PIMPRI, PUNE 411018. 
             </p>
           </div>
         </div>

@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaLinkedinIn, FaTwitter, FaInstagram } from 'react-icons/fa';
-import ownerImg from '../../assets/ourteam/owner.jpeg';
-import corporateImg from '../../assets/ourteam/snehal.png';
-import weddingImg from '../../assets/ourteam/shreyash.jpeg';
-import accountImg from '../../assets/ourteam/bpatil.png';
-import productionImg from '../../assets/ourteam/akshayp.png'; 
-import purchaseImg from '../../assets/ourteam/meet.png';
-import inventoryImg from '../../assets/ourteam/khan.jpeg';
+import ownerImg from '../../assets/ourteam/owner.webp';
+import corporateImg from '../../assets/ourteam/snehal.webp';
+import weddingImg from '../../assets/ourteam/shreyash.webp';
+import accountImg from '../../assets/ourteam/bpatil.webp';
+import productionImg from '../../assets/ourteam/akshayp.webp'; 
+import purchaseImg from '../../assets/ourteam/meet.webp';
+import inventoryImg from '../../assets/ourteam/khan.webp';
 import './HomeOurTeam.css';
 
 const teamMembers = [

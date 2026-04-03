@@ -13,11 +13,11 @@ import "./Turf.css";
 /* ---------------- IMAGE DATA ---------------- */
 
 const imageData = [
-  { src: "/images/turf/1.jpg", category: "Events" },
-  { src: "/images/turf/2.jpg", category: "Football" },
-  { src: "/images/turf/3.jpg", category: "Cricket" },
-  { src: "/images/turf/4.jpg", category: "Events" },
-  { src: "/images/turf/5.jpg", category: "Football" },
+  { src: "/images/turf/1.webp", category: "Events" },
+  { src: "/images/turf/2.webp", category: "Football" },
+  { src: "/images/turf/3.webp", category: "Cricket" },
+  { src: "/images/turf/4.webp", category: "Events" },
+  { src: "/images/turf/5.webp", category: "Football" },
 ];
 
 /* ---------------- CATEGORIES ---------------- */

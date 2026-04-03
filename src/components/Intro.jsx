@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import "./Intro.css";
 
-import img1 from "../assets/Starter/intro4.png";
-import img2 from "../assets/Starter/intro6.png";
+import img1 from "../assets/Starter/intro4.webp";
+import img2 from "../assets/Starter/intro6.webp";
 import introSound from "../assets/sounds/introsound.mp3";
 
 const Intro = () => {

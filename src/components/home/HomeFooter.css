@@ -192,6 +192,17 @@
   font-weight: 500;
 }
 
+.footer-contact-block p a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contact-block p a:hover {
+  color: #c89b3c;
+  text-decoration: underline;
+}
+
 /* Footer Bottom */
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);

@@ -13,25 +13,25 @@ const products = [
     id: 1,
     name: "Luxury Sofa",
     price: "₹24,999",
-    img: "/images/furniture/sofa.jpg",
+    img: "/images/furniture/sofa.webp",
   },
   {
     id: 2,
     name: "Modern Chair",
     price: "₹6,999",
-    img: "/images/furniture/chair.jpg",
+    img: "/images/furniture/chair.webp",
   },
   {
     id: 3,
     name: "Wooden Table",
     price: "₹12,499",
-    img: "/images/furniture/table.jpg",
+    img: "/images/furniture/table.webp",
   },
   {
     id: 4,
     name: "Premium Bed",
     price: "₹34,999",
-    img: "/images/furniture/bed.jpg",
+    img: "/images/furniture/bed.webp",
   },
 ];
 

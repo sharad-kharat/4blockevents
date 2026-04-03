@@ -3,9 +3,9 @@ import "./HomeVentures.css";
 
 // Importing logos
 import logoAnantam from "../../assets/ourventures/anantamlogo.webp"; // Using main company logo as fallback for Anantam Banquet
-import logoTurf from "../../assets/ourventures/turflogo.png";
-import logoTravel from "../../assets/ourventures/cablogo.jpeg";
-import logoFurniture from "../../assets/ourventures/furniturelogo.png";
+import logoTurf from "../../assets/ourventures/turflogo.webp";
+import logoTravel from "../../assets/ourventures/cablogo.webp";
+import logoFurniture from "../../assets/ourventures/furniturelogo.webp";
 
 const ventures = [
   {

@@ -2,14 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import './HomeClients.css';
 
-import logoVJ from "../../assets/ourpartner/vilasjavdekarlogo.jpg";
-import logoSupreme from "../../assets/ourpartner/suprimelogo.png";
-import logoRohan from "../../assets/ourpartner/rohanlogo.jpg";
-import logoVerma from "../../assets/ourpartner/vermahomeslogo.png";
-import logoJhamtani from "../../assets/ourpartner/jhamtanilogo.png";
-import logoDas from "../../assets/ourpartner/daslogo.png";
-import logoTunkers from "../../assets/ourpartner/tunkerslogo.png";
-import logoSumsoft from "../../assets/ourpartner/sumalogo.png";
+import logoVJ from "../../assets/ourpartner/vilasjavdekarlogo.webp";
+import logoSupreme from "../../assets/ourpartner/suprimelogo.webp";
+import logoRohan from "../../assets/ourpartner/rohanlogo.webp";
+import logoVerma from "../../assets/ourpartner/vermahomeslogo.webp";
+import logoJhamtani from "../../assets/ourpartner/jhamtanilogo.webp";
+import logoDas from "../../assets/ourpartner/daslogo.webp";
+import logoTunkers from "../../assets/ourpartner/tunkerslogo.webp";
+import logoSumsoft from "../../assets/ourpartner/sumalogo.webp";
 
 const clients = [
   { name: "VILAS JAVDEKAR", logo: logoVJ },

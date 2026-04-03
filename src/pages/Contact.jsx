@@ -50,17 +50,17 @@ const Contact = () => {
             <div className="info-item">
               <FaPhoneAlt className="info-icon" />
               <div>
-                <p>+91 8855844448</p>
-                <p>+91 9021351689</p>
+                <p className="mb-2"><a href="tel:+918855844448" className="footer-call-link" style={{textDecoration: 'none', color: 'inherit'}}>+91 8855844448</a></p>
+                <p><a href="tel:+919021351689" className="footer-call-link" style={{textDecoration: 'none', color: 'inherit'}}>+91 9021351689</a></p>
               </div>
             </div>
 
             <div className="info-item">
               <FaEnvelope className="info-icon" />
               <div>
-                <p><strong>General:</strong> 4blocksevents@gmail.com</p>
-                <p><strong>Corporate Sales:</strong> SNEHAL.4BLOCKSEVENTS@GMAIL.COM</p>
-                <p><strong>Wedding/Personal:</strong> SHREYAS.4BLOCKSEVENT@GMAIL.COM</p>
+                <p><strong>General:</strong> <a href="mailto:support@4blocksevent.com" className="footer-call-link" style={{textDecoration: 'none', color: 'inherit'}}>support@4blocksevent.com</a></p>
+                <p><strong>Corporate Sales:</strong> <a href="mailto:snehal.4blocksevents@gmail.com" className="footer-call-link" style={{textDecoration: 'none', color: 'inherit'}}>SNEHAL.4BLOCKSEVENTS@GMAIL.COM</a></p>
+                <p><strong>Wedding/Personal:</strong> <a href="mailto:shreyas.4blocksevent@gmail.com" className="footer-call-link" style={{textDecoration: 'none', color: 'inherit'}}>SHREYAS.4BLOCKSEVENT@GMAIL.COM</a></p>
               </div>
             </div>
 

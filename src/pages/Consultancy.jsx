@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
 import "./Consultancy.css";
-import img1 from '../assets/consaltancy/consaltant.png'
+import img1 from '../assets/consaltancy/consaltant.webp'
 const Consultancy = () => {
   const containerVariants = {
     hidden: { opacity: 0 },

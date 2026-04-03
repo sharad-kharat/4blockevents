@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import watermarkLogo from "../../assets/Watermark/watermark.png";
-import aboutus1 from "../../assets/aboutus/aboutus1.jpg";
-import aboutus2 from "../../assets/aboutus/aboutus2.jpg";
+import watermarkLogo from "../../assets/Watermark/watermark.webp";
+import aboutus1 from "../../assets/aboutus/aboutus1.webp";
+import aboutus2 from "../../assets/aboutus/aboutus2.webp";
 import "./HomeAbout.css";
 
 const HomeAbout = () => {

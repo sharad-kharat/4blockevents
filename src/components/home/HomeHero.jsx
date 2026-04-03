@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './HomeHero.css';
-import logoImg from '../../assets/Logo/Logo1.png';
+import logoImg from '../../assets/Logo/Logo1.webp';
 
-import homehero1 from '../../assets/Home/homehero/homehero1.png';
-import homehero2 from '../../assets/Home/homehero/homehero2.jpg';
-import homehero3 from '../../assets/Home/homehero/homehero3.jpeg';
+import homehero1 from '../../assets/Home/homehero/homehero1.webp';
+import homehero2 from '../../assets/Home/homehero/homehero2.webp';
+import homehero3 from '../../assets/Home/homehero/homehero3.webp';
 
 const slides = [
   {
@@ -84,6 +84,16 @@ const HomeHero = () => {
 
   return (
     <section className="home-hero-section">
+      {/* React 19 will automatically hoist these preloads to the document head! */}
+      {slides.map((slide, index) => (
+        <link 
+          key={slide.id}
+          rel="preload" 
+          as="image" 
+          href={slide.image} 
+          fetchPriority={index === 0 ? "high" : "low"} 
+        />
+      ))}
       <AnimatePresence initial={false} custom={{ direction, animType: slides[slideIndex].animType }}>
         <motion.div
           key={page}
@@ -116,6 +126,8 @@ const HomeHero = () => {
               alt="4 Blocks Logo" 
               className="w-40 md:w-56 lg:w-72 mb-6 object-contain rounded-full drop-shadow-2xl"
               style={{borderRadius:0}}
+              loading="eager"
+              fetchPriority="high"
             />
             <h1 className="home-hero-main-title">
               {slides[slideIndex].title}
